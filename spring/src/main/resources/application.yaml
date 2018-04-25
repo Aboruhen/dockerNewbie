@@ -1,0 +1,19 @@
+google:
+  client:
+    client-id: 839588394571-3g6fd9pj83k4d954njdbqo0itc3jbmfr.apps.googleusercontent.com
+    client-secret: JptuwYnWjn0Fj3xOzhndlwcj
+    user-authorization-uri: https://accounts.google.com/o/oauth2/auth
+    access-token-uri: https://www.googleapis.com/oauth2/v3/token
+    scope: profile,email
+  resource:
+    user-info-uri: https://www.googleapis.com/userinfo/v2/me
+auth-server:
+  client:
+    client-id: acme
+    client-secret: acmesecret
+    user-authorization-uri: http://localhost:8081/oauth/authorize
+#    access-token-uri: http://localhost:8081/oauth/token
+    access-token-uri: http://auth:8081/oauth/token
+    scope: profile
+  resource:
+    user-info-uri: http://auth:8081/me

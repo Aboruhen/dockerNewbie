@@ -1,0 +1,20 @@
+version: '3'
+services:
+  web:
+    image: docker-com.lohika.jclub.oauth2-spring
+    ports:
+      - "8080:8080"
+    environment:
+          - SECURITY_OAUTH2_CLIENT_USERAUTHORIZATIONURI=http://auth:8081
+          - SECURITY_OAUTH2_CLIENT_ACCESSTOKENURI=http://auth:8081
+          - SECURITY_OAUTH2_CLIENT_USERINFOURI=http://auth:8081/me
+  auth:
+    image: docker-com.lohika.jclub.oauth2-auth-server
+    ports:
+      - "8081:8081"
+    links:
+      - web
+    depends_on:
+      - web
+    environment:
+      - SECURITY_OAUTH2_CLIENT_PREESTABLISHEDREDIRECTURI=http://web:8080
