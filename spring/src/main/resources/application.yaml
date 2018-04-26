@@ -13,7 +13,7 @@ auth-server:
     client-secret: acmesecret
     user-authorization-uri: http://localhost:8081/oauth/authorize
 #    access-token-uri: http://localhost:8081/oauth/token
-    access-token-uri: http://auth:8081/oauth/token
+    access-token-uri: http://${AUTH_HOST:localhost}:8081/oauth/token
     scope: profile
   resource:
-    user-info-uri: http://auth:8081/me
+    user-info-uri: http://${AUTH_HOST:localhost}:8081/me
