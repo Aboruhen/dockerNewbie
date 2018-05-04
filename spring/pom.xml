@@ -110,7 +110,6 @@
                             </run>
                         </image>
                     </images>
-
                 </configuration>
                 <executions>
                     <execution>

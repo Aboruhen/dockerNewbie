@@ -13,5 +13,5 @@ security:
       client-secret: acmesecret
       scope: profile
       auto-approve-scopes: '.*'
-      pre-established-redirect-uri: http://${WEB_HOST:localhost}:8080/
+      pre-established-redirect-uri: http://localhost:8080/
       use-current-uri: false

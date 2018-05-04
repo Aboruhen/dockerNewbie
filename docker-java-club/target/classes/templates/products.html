@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Docker demo spring boot products</title>
+</head>
+<body>
+<div class="container">
+    <div class="container-fluid" style="margin-top: 20px">
+        <div th:if="${not #lists.isEmpty(products)}">
+            <h2>Product List</h2>
+            <table class="table table-striped">
+                <tr>
+                    <th>Product Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}">Product Id</td>
+                    <td th:text="${product.name}">descirption</td>
+                    <td th:text="${product.price}">price</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
